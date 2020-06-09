@@ -14,11 +14,10 @@ spec:
     spec:
       containers:
       - name: position-tracker
-        image: ${REPOSITORY_TAG}
+        image: swetasir/tracker:latest
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        imagePullPolicy: Never
         readinessProbe:
           httpGet:
             path: /healthz
